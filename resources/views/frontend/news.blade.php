@@ -38,12 +38,12 @@
                     <ul>
                         @foreach (App\Models\News::where('public', 1)->limit(10)->latest()->get() as $newses)
                             <li class="my-2 ">
-                                <a href="{{ route('home.news', $newses->id) }}" class="block hover:bg-gray-100 py-1 rounded w-full flex items-center">
+                                <a href="{{ route('home.news', $newses->slug) }}" class="block hover:bg-gray-100 py-1 rounded w-full flex items-center">
                                     <div class="w-2/6 overflow-hidden">
                                         <img src="{{ Storage::url($newses->image) }}" alt="{{ $newses->title }}" class="rounded" width="100%" height="auto">
                                     </div>
                                     <div class="w-3/6 md:text-sm pr-3">
-                                        {{ $newses->title }}
+                                        {{ Str::limit($newses->title, 20, '...') }}
                                     </div>
                                 </a>
                             </li>
@@ -57,12 +57,12 @@
                     <ul>
                         @foreach (App\Models\News::where('public', 1)->where('is_supernews', 1)->limit(5)->latest()->get() as $newses)
                             <li class="my-2 ">
-                                <a href="{{ route('home.news', $newses->id) }}" class="block hover:bg-gray-100 py-1 rounded w-full flex items-center">
+                                <a href="{{ route('home.news', $newses->slug) }}" class="block hover:bg-gray-100 py-1 rounded w-full flex items-center">
                                     <div class="w-2/6 overflow-hidden">
                                         <img src="{{ Storage::url($newses->image) }}" alt="{{ $newses->title }}" class="rounded" width="100%" height="auto">
                                     </div>
                                     <div class="w-3/6 md:text-sm pr-3">
-                                        {{ $newses->title }}
+                                        {{ Str::limit($newses->title, 20, '...') }}
                                     </div>
                                 </a>
                             </li>

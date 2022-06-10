@@ -47,7 +47,7 @@
                                         <i class="fa fa-angle-down"></i>
                                         <span class="mx-3">{{ auth()->user()->name }}</span>
                                         <div class="w-[30px] h-[30px] rounded-full bg-gray-200 overflow-hidden ">
-                                            <img src="{{ auth()->user()->image ? Storage::url(auth()->user()->image) : asset('assets/images/profile/1.png')  }}" alt="">
+                                            <img src="{{ auth()->user()->image ? Storage::url(auth()->user()->image) : asset('assets/images/user/1.png')  }}" alt="">
                                         </div>
                                     </div>
                                     <div id="userMenu" class="hidden absolute top-10 left-0 w-[150px] bg-white rounded overflow-hidden shadow-md border z-50">

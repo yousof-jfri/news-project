@@ -20,7 +20,6 @@
                         <tr class="bg-blue-100">
                             <th class="text-center py-3">#</th>
                             <th class="text-center py-3">نظر</th>
-                            <th class="text-center py-3">نظر به</th>
                             <th class="text-center py-3">کاربر</th>
                             <th class="text-center py-3">وضعیت</th>
                             <th class="text-center py-3">تاریخ</th>
@@ -32,9 +31,6 @@
                             <tr class="hover:bg-gray-100">
                                 <td class="text-center py-3">{{ $loop->index + 1 }}</td>
                                 <td class="text-center py-3">{{ $comment->comment }}</td>
-                                <td class="text-center py-3">
-                                    {{ $comment->commentable->title }}
-                                </td>
                                 <td class="text-center py-3">{{ $comment->user->name }}</td>
                                 <td class="text-center py-3"> @if($comment->approved) <span class="px-2 py-1 rounded bg-green-500 text-white text-xs">تایید شده</span> @else <span class="px-2 py-1 rounded bg-red-500 text-white text-xs">تایید نشده</span> @endif</td>
                                 <td class="text-center py-3">{{ $comment->created_at }}</td>

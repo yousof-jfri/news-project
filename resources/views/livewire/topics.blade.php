@@ -31,7 +31,7 @@
                         <tr class="hover:bg-gray-100">
                             <td class="text-center py-3">{{ $loop->index + 1 }}</td>
                             <td class="text-center py-3">{{ $topic->title }}</td>
-                            <td class="text-center py-3">{{ $topic->description }}</td>
+                            <td class="text-center py-3">{{ Str::limit( $topic->description, 20, '...') }}</td>
                             <td class="text-center py-3">{{ $topic->views }}</td>
                             <td class="text-center py-3">
                                 <img src="{{ Storage::url($topic->image) }}" alt="new image" class="w-12">

@@ -20,15 +20,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-// admin
-Route::get('/', [AdminController::class, 'index']);
-
 // Profile
 Route::get('/profile', [AdminController::class, 'profile'])->name('.profile');
 
 // users
 Route::get('/users', [UserController::class, 'index'])->name('.users.index');
+
+// admin
+Route::get('/', [AdminController::class, 'index']);
 
 // categories
 Route::get('/categories', [CategoryController::class, 'index'])->name('.categories.index');

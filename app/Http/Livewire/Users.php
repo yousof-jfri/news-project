@@ -52,6 +52,7 @@ class Users extends Component
         // validate data
         $this->validateData();
 
+        $image = null;
         if($this->image)
         {
             $image = $this->image->store('public/users/profile');
