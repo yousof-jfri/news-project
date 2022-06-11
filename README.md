@@ -4,6 +4,8 @@ admin control all the website.
 staffs has some limited which is setted by admin.
 users can only post new topics, comment, see posts and newses.
 
+admin and staff users can post newses into the website and manage website.
+
 ## In this project I have used
     tailwind css version 3
     php version 8.0.2
